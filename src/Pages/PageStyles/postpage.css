@@ -1,0 +1,93 @@
+.title_editor_container{
+    margin-bottom: 3px;
+
+}
+.title_bar{
+    position: relative;
+    
+}
+
+.title_text_area{
+    overflow-x: hidden;
+    overflow-wrap: break-word;
+    height: 39px;
+    color: #d7dadc;
+    padding: 8px 68px 8px 16px;
+    border: 1px solid #343536;
+    background-color: var(--background-icons);
+    resize: none;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    font-family: inherit;
+    text-rendering: auto;
+
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+
+    text-align: start;
+    -webkit-appearance: textarea;
+
+    -webkit-rtl-ordering: logical;
+    flex-direction: column;
+
+    cursor: text;
+    white-space: pre-wrap;
+
+    margin: 0em;
+    font: 400 13.3333px Arial;
+}
+
+
+
+
+
+
+.create_post_form_container{
+    display: grid;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+
+.post_button_container{
+    box-sizing: border-box;
+    display: flex;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+
+.post_button{
+    width:63px;
+    border-color: #d7dadc;
+    fill:#1a1a1b;
+    margin-top: 8px;
+    color: #1a1a1b;
+    background-color: #d7dadc;
+
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    line-height: 24px;
+    text-transform: uppercase;
+    padding: 3px 16px;
+}
+
+.post_button:hover{
+    background-color: thistle;
+}
+
