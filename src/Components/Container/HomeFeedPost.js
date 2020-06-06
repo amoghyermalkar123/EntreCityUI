@@ -10,16 +10,18 @@ export class HomeFeedPost extends Component {
     this.state = {
       posts: [],
     };
-    this.getFeed = this.getFeed.bind(this);
+    // this.getFeed = this.getFeed.bind(this);
   }
 
-  getFeed() {
-    const url_string = "http://localhost:8000/s/feed/1366/";
+  componentWillMount() {
+    // const url_string = "http://localhost:8000/s/feed/1366/";
+    const url_string = this.props.request_url
 
     axios
       .post(url_string)
       .then((res) => {
         // handle success
+        // console.log(res.data.message)
         this.setState({
           posts: res.data.message
         });
@@ -40,7 +42,7 @@ export class HomeFeedPost extends Component {
 
     return (
       <div>
-          <button onClick = {this.getFeed}>refresh</button>
+          {/* <button onClick = {this.getFeed}>refresh</button> */}
           <Fragment>
         {this.state.posts.map((post) => (
           <Post key = {post.title} postData={post} />
