@@ -1,9 +1,14 @@
 import React from "react";
+import { HashRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 // custom components
 import Upvote from "../../Assets/upvote.png";
 import Downvote from "../../Assets/downvote.png";
 import Comment from "../../Assets/comment.png";
+import titles from "../Store";
+import communityName from "../Store";
+
 //custom css
 import "../../App.css";
 import "../../Assets/Colors.css";
@@ -14,9 +19,25 @@ import "bootstrap/dist/css/bootstrap.min.css";
 var moment = require("moment");
 
 function Post(props) {
-    console.log(props)
+  const history = useHistory();
+
+  function handlePostPageRoute() {
+    titles[0].title = props.postData.title 
+    let temp = props.postData.title
+    let path = `/home/post/view/${temp}`
+    history.push(path)
+  }
+
+  function handleCommunityPageRoute() {
+    communityName[0].community_name = props.postData.community_name
+    let tempp = props.postData.community_name
+    let pathh = `/com/${tempp}`
+    history.push(pathh)
+  }
+
   return (
     <div>
+      {/* {setpostKey("rima-is-amazing")} */}
       <div class="post">
         <div
           class="vote_class"
@@ -38,7 +59,7 @@ function Post(props) {
           <div class="content_container">
             <div class="content">
               <div class="post_title">
-                <a class="titletext">
+                <a class="titletext" onClick={handlePostPageRoute}>
                   <h3 class="titleactul">
                     {props.postData.title}
                   </h3>
@@ -46,7 +67,7 @@ function Post(props) {
               </div>
               <div class="info_container">
                 <div class="comm_name">
-                  <a href="/" class="community_name_text">
+                  <a href = "/" class="community_name_text" onClick={handleCommunityPageRoute}>
                     {props.postData.community_name}
                   </a>
                 </div>
@@ -58,6 +79,7 @@ function Post(props) {
                       {props.postData.startup_name}
                     </a>
                   </div>
+                  <span>.</span>
                   <a href="/" class="post_time">
                     {moment(props.postData.created_at).fromNow()}
                   </a>
