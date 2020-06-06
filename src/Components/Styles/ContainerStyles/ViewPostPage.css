@@ -1,0 +1,24 @@
+.vpp_post_container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid burlywood;
+}
+
+.part_one{
+    display: flex;
+    flex-direction: row;
+}
+
+.time_stamp{
+    margin-left: 3px;
+    color: wheat;
+}
+
+.vpp_content{
+    color: teal;
+}
+
+.vpp_comments_container{
+    border: 1px solid hotpink;
+}
