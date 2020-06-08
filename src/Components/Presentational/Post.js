@@ -35,6 +35,13 @@ function Post(props) {
     history.push(pathh)
   }
 
+  function handleStartupPageRoute () {
+    let temppp = props.postData.startup_name
+    let pathhh = `/${temppp}`
+    history.push(pathhh)
+
+  }
+
   return (
     <div>
       {/* {setpostKey("rima-is-amazing")} */}
@@ -67,7 +74,7 @@ function Post(props) {
               </div>
               <div class="info_container">
                 <div class="comm_name">
-                  <a href = "/" class="community_name_text" onClick={handleCommunityPageRoute}>
+                  <a class="community_name_text" onClick={handleCommunityPageRoute}>
                     {props.postData.community_name}
                   </a>
                 </div>
@@ -75,12 +82,12 @@ function Post(props) {
                 <div class="startup_name_div">
                   <span class="posted_by">Posted by</span>
                   <div class="strartup_name_cont">
-                    <a href="/" class="startup_name_text">
+                    <a class="startup_name_text" onClick = {handleStartupPageRoute}>
                       {props.postData.startup_name}
                     </a>
                   </div>
                   <span>.</span>
-                  <a href="/" class="post_time">
+                  <a class="post_time">
                     {moment(props.postData.created_at).fromNow()}
                   </a>
                 </div>
