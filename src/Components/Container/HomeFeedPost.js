@@ -25,7 +25,7 @@ export class HomeFeedPost extends Component {
         this.setState({
           posts: res.data.message
         });
-        // console.log(this.state.posts[0].ceo_name);
+        // console.log(this.state.post);
       })
       .catch(function (error) {
         // handle error
