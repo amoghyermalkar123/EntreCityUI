@@ -22,6 +22,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { HashRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import CommunityPage from "./Pages/CommunityPage";
+import StartupPage from "./Pages/StartupPage";
 
 function App() {
   return (
@@ -145,9 +146,10 @@ function App() {
               </Route>
 
               <Route path ={`/com/:communityName`}>
-                {" "}
-                {/*give dynamic routing */}
                 <CommunityPage />
+              </Route>
+              <Route path ={`/:startupName`}>
+                <StartupPage/>
               </Route>
             </Switch>
           </div>
