@@ -1,0 +1,49 @@
+.sp_main_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+}
+
+.sp_left_flex{
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid bisque;
+    width: 50%;
+    height: auto;
+    margin: 2px;
+}
+
+.sp_right_flex{
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid honeydew;
+    width: 50%;
+    height: auto;
+    margin: 2px;
+}
+@media (min-width: 480px) and (max-width: 900px) {
+    .sp_main_container{
+        flex-wrap: wrap;
+    }
+
+    .sp_left_flex{
+        width: 100%;
+    }
+    .sp_right_flex{
+        width: 100%;
+    }
+}
+
+.sp_posts_wrapper{
+    background-color: #515242;
+    padding: 1px;
+}
+
+.sp_posts_container{
+    border: 1px solid black;
+    min-height: 300px;
+    max-height: auto;
+}
